@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="images/i.png" />
+    <link rel="stylesheet" href="homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+    <title>FIFTY SHADES OF CUSSINE</title>
+</head>
+<body>
+
+    <div class="menu">
+        <div class="wrapper">
+
+            <a href="#home"><img src="images/LOGO.png"></a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>FIFTY SHADES OF CUSSINE</h1>
+        <p>“There is no love sincerer than the love of food.”</p>
+        <a href="#" class="button" id="button"> LOGIN</a>
+    </div>
+
+    <div class="popup">
+        <div class="close"><img src="images/close.png" alt="close" class="close"></div>
+        <div class="popup-content">
+
+            <div class="button-box">
+
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+
+            </div>
+            <div class="social-icons">
+                <img src="images/facebook.png">
+                <img src="images/tweeter.png">
+                <img src="images/whatsapp.png">
+
+            </div>
+
+
+            <form id="login" class="input-group">
+
+                <input type="text" class="input-field" placeholder="USER ID" required>
+                <input type="text" class="input-field" placeholder="ENTER PASSWORD" required>
+                <input type="checkbox" class="check-box"><span>Remember Password</span>
+                <button type="submit" class="submit-btn">LOGIN</button>
+            </form>
+            <form id="register" class="input-group">
+
+                <input type="text" class="input-field" placeholder="USER ID" required>
+                <input type="text" class="input-field" placeholder="E-MAIL ID" required>
+                <input type="text" class="input-field" placeholder="ENTER PASSWORD" required>
+                <input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+                <button type="submit" class="submit-btn">REGISTER</button>
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register() {
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+
+        function login() {
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+        function togglePopup() {
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+
+        document.getElementById("button").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "flex";
+        })
+        document.querySelector(".close").addEventListener("click", function () {
+            document.querySelector(".popup").style.display = "none";
+
+        })
+
+    </script>
+    <div class="footer">  <p class="text-center">&copy; 2021 All rights reserved  -FIFTY SHADES OF CUSSINE-</p></div>
+
+
+
+
+
+</body>
+</html>
